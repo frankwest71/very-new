@@ -1,0 +1,22 @@
+final public  class Test extends java.lang.Object
+{
+public  Test()
+{
+java.lang.Object();
+}
+public static  void main(java.lang.String[] arg1)
+{
+int a1=5;
+Test a2=new Test();
+int a3=a2.add(a1);
+}
+public  int add(int arg2)
+{
+}
+public  void sub(int arg3)
+{
+arg3=6;
+int a4=3;
+}
+
+}

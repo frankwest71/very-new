@@ -1,0 +1,77 @@
+import javax.swing.*;
+import java.awt.event.*;
+import java.util.Vector;
+import java.awt.*;
+class SetFont extends JFrame implements ActionListener{
+	JFrame frame;
+	SetFont()
+	{
+
+	}
+SetFont createFont()
+	{
+		Vector v=new Vector();
+Vector v1=new Vector();
+Vector v2=new Vector();
+
+
+   		v.addElement("Plain");
+	v.addElement("Bold");
+	v.addElement("Italics");
+
+	v2.addElement("Helvetica");
+	v2.addElement("TimesRoman");
+	v2.addElement("Courier");
+
+
+		frame=new JFrame("Choose Font Properties");
+		JPanel panel=new JPanel();
+		JList fontname=new JList(v2);
+		JList fontstyle=new JList(v);
+		
+		
+v1.addElement("10");
+v1.addElement("11");
+v1.addElement("12");
+v1.addElement("13");
+v1.addElement("14");
+v1.addElement("15");
+v1.addElement("16");
+v1.addElement("17");
+v1.addElement("18");
+v1.addElement("19");
+v1.addElement("20");
+
+		
+		JList fontsize=new JList(v1);
+		JButton setfont=new JButton("Set Font");
+		JButton exit=new JButton("Exit");
+		
+		panel.setLayout(new GridLayout(3,2));
+		panel.add(fontname);
+		panel.add(fontstyle);
+		panel.add(fontsize);
+		panel.add(setfont);
+		panel.add(exit);
+		exit.addActionListener(this);
+		setfont.addActionListener(this);
+		frame.getContentPane().add(panel);
+		frame.setVisible(true);
+		frame.pack();
+		
+		}
+		public SetFont actionPerformed(ActionEvent ae)
+	{
+		String cmd=ae.getActionCommand();
+		if(cmd.equals("Set Font"))
+		{
+			
+		}
+		else
+		{
+			
+			frame.dispose();
+		}
+			
+	}
+}
