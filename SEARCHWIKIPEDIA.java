@@ -86,13 +86,7 @@ public class SEARCHWIKIPEDIA
         int responseCode = huc.getResponseCode();
 
         if (responseCode == 200) {
-            System.out.println("Website exists");
-            System.exit(0);
-        } else {
-            System.out.println("Not found");
-            System.exit(0);
-        }
-        
+        System.out.println("Website exists");
         HtmlPage page = webClient.getPage(original.toString());
         System.out.println(original.toString());
         String pageContent=page.asXml(); //or asText();
@@ -107,6 +101,13 @@ public class SEARCHWIKIPEDIA
         updatedtext= new char[end-begin];
         text.getChars(begin,end,updatedtext, 0);
         //System.out.println(updatedtext);
+            System.exit(0);
+        } else {
+            System.out.println("Not found");
+            System.exit(0);
+        }
+        
+     
     }
 
 }
